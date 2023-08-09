@@ -1,12 +1,169 @@
-/*? CSS  */
+/*? CSS for BMI Calculator  */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-body{
+:root{
+    --text-color: #323232;
+    --accent-color: aqua;
+}
+
+body {
     height: 100vh;
     width: 100%;
+    background-color: grey;
+    color: var(--text-color);
+    overflow-y: hidden;
+}
+
+.container {
+    width: 28vw;
+    height: 72vh;
+    background-color: rgb(190, 190, 190);
+    box-shadow: 2px 2px 10px black;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin: 5% auto;
+
+    text-align: center;
+
+    padding: 0 2%;
+}
+
+h2 {
+    width: 100%;
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    background-color: var(--accent-color);
+}
+
+/*? Form  */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.form label {
+    font-size: 1.2rem;
+}
+
+.form input {
+    border-radius: 4px;
+    border: 1px solid black;
+    width: 5vw;
+    height: 4vh;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.form input:focus {
+    outline: none;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.answer{
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+    color: var(--text-color);
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    width: 8vw;
+    height: 6vh;
+    border-radius: 4px;
+    border: 1px solid grey;
+    font-size: 1.2rem;
+    /* margin:0 0.5vw; */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 2px 2px 5px grey;
+    color: var(--text-color);
+}
+
+.btn:focus{
+    background-color: var(--accent-color);
+    border:none;
+}
+
+.btn:hover{
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+    color: var(--text-color);
+    box-shadow: none;
+    border: none;
+}
+
+
+/*? BMI Guide */
+h3 {
+    font-size: 1.8rem;
+}
+
+table {
+    border: 1px solid #8a8a8a;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+th {
+    background-color: var(--accent-color);
+}
+
+th,
+td {
+    border: 1px solid #9c9c9c;
+    border-radius: 5px;
+    width: 12vw;
+    height: 5vh;
+    font-size: 1.1rem;
+    padding: 0 3%;
+}
+
+.under:hover {
+    background-color: lightsalmon;
+}
+
+.normal:hover {
+    background-color: #00bd29;
+}
+
+.over:hover {
+    background-color: orange;
+}
+
+.obesity:hover {
+    background-color: crimson;
 }

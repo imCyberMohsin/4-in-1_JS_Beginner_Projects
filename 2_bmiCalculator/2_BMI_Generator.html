@@ -1,0 +1,63 @@
+<!--! HTML for BMI Calculator  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator 2023</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>BMI Calculator 2023</h2>
+
+        <form action="#" class="form">
+            <p><label>Height in CM : <input type="text" id="height"></label></p>
+            <p><label>Weight in KG : <input type="text" id="weight"></label></p>
+
+            <div class="answer">
+                <p>Your BMI : </p>
+                <div class="bmi" id="bmi"></div>
+            </div>
+
+            <div class="buttons">
+                <button class="btn" type="reset">Clear</button>
+                <button class="btn" type="submit">Calculate</button>
+            </div>
+
+            <div class="bmi-guide">
+                <h3>BMI Guide</h3>
+                <table border="0">
+                    <tr>
+                        <th>BMI</th>
+                        <th>STATUS</th>
+                    </tr>
+                    <tr class="under">
+                        <td>18.5</td>
+                        <td>Under Weight</td>
+                    </tr>
+                    <tr class="normal">
+                        <td>18.5-24.9</td>
+                        <td>Normal Weight</td>
+                    </tr>
+                    <tr class="over">
+                        <td>25-29.9</td>
+                        <td>Over Weight</td>
+                    </tr>
+                    <tr class="obesity">
+                        <td>Above 30</td>
+                        <td>Obesity</td>
+                    </tr>
+
+                </table>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
