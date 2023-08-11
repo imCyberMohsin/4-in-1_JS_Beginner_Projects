@@ -13,15 +13,32 @@ const randomColor = () => {
 
 // Declaring this in global scope, so that we can use it inside both below functions.
 let IntervalId;
+let currentColor;
 
 // StartChangingColor() 
 const startChangeColor = () => {
     if (!IntervalId) {
-        IntervalId = setInterval(bgColor, 1000);
+        IntervalId = setInterval(changeColors, 1000);
+        changeColors(); // initial colors change
     }
 
-    function bgColor() {
-        document.body.style.background = randomColor();
+    function changeColors() {
+        currentColor = randomColor();
+
+        // document.body.style.background = randomColor();
+
+        const head = document.querySelector('#heading');
+        head.style.color = currentColor;
+
+        const btns = document.getElementsByClassName('btn');
+        for (let btn of btns) {
+            btn.style.backgroundColor = currentColor;
+        }
+
+        const shadow = document.getElementsByClassName('container');
+        for (let s of shadow) {
+            s.style.boxShadow = `3px 3px 200px 1px ${currentColor}`;
+        }
     }
 }
 
@@ -32,7 +49,7 @@ const stopChangeColor = () => {
 }
 
 // Start Button
-document.querySelector('#start').addEventListener('click', startChangeColor)
+document.querySelector('#start').addEventListener('click', startChangeColor);
 
 // Stop Button
-document.querySelector('#stop').addEventListener('click', stopChangeColor)
+document.querySelector('#stop').addEventListener('click', stopChangeColor);
