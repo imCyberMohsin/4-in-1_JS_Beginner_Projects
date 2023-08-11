@@ -1,0 +1,34 @@
+<!--! Guess The Number  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuessTheNumber</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Guess The Number Game</h1>
+        <div class="card-body">
+            <div class="text-part">
+                <p>Try and guess a random number between 1 to 100.</p>
+            </div>
+            <form class="form">
+                <h2>Guess A Number</h2>
+                <input type="text" id="guess-input" class="input-box">
+                <input type="submit" class="btn" id="submit-btn"></input>
+            </form>
+            <div class="paras">
+                <p id="prev-guess">Previous Guesses :<span></span> </p>
+                <p id="rem-guess">Attempts Remaining :<span></span> </p>
+                <p id="smallORbig"></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

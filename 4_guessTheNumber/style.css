@@ -1,12 +1,122 @@
-/*? CSS  */
+/*? CSS - Guess The Number */
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body{
     height: 100vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+}
+
+.container{
+    height: 75vh;
+    width: 30vw;
+    background-color: rgb(62, 62, 62);
+    padding:2%;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.container h1{
+    font-size: 1.7rem;
+    padding: 0;
+}
+
+.card-body{
+    background-color: grey;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5%;
+}
+
+.text-part p{
+    text-align: center;
+}
+p{
+    font-size: 1.4rem;
+}
+
+form {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8%;
+    justify-content: center;
+    align-items: center;
+}
+
+form h2{
+    font-size: 2rem;
+}
+
+.input-box{
+    width: 80%;
+    height: 15%;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: rgb(55, 55, 55);
+    transition: 0.2s ease-in-out;
+}
+
+.input-box:focus{
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    border-radius: 0px;
+}
+
+.btn{
+    width: 40%;
+    height:15%;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.4rem;
+    color: white;
+    background-color: rgb(54, 54, 54);
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+}
+
+.btn:hover{
+    outline: 1px solid gold;
+    box-shadow: 1px 1px 3px gold;
+}
+
+.btn:active{
+    transform: scale(1.05);
+}
+
+.paras{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 10px;
+    text-align: center;
+    padding: 0 2%;
+}
+
+.paras :nth-child(3){
+    color: gold;
 }
