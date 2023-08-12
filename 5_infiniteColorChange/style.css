@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+::selection{
+    background-color: #B65506;
+    color: white;
+}
+
 body {
     height: 100vh;
     width: 100%;
