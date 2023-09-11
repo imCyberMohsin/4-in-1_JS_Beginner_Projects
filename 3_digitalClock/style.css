@@ -9,12 +9,16 @@
     font-family: Orbitron;
 }
 
+:root{
+    --accent-color: #17123f;
+}
+
 body {
     height: 100vh;
     width: 100%;
-    background: #0f0c29;
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: #222222;
+    /* background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,15 +26,17 @@ body {
 
 
 .clock {
-    background-color: #17123f;
+    background-color: var(--accent-color);
+    border: 2px solid white;
     width: 40vw;
-    height: 20vh;
+    height: 25vh;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     color: white;
-    box-shadow: 2px 2px 10px black;
+    box-shadow: 1px 1px 5px grey;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #ffffff1f);
 }
 
 h1 {
